@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2c6dc8a5.css",
+    "main.js": "/static/js/main.b3b94c50.js",
+    "static/js/787.ec610b0e.chunk.js": "/static/js/787.ec610b0e.chunk.js",
+    "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/logo.svg": "/static/media/logo.296208628d4e32eb799fc6c8bad3ae4f.svg",
+    "static/media/icon1.svg": "/static/media/icon1.c7d6b6e3f09ac9a8e9ab96d60e94dc55.svg",
+    "index.html": "/index.html",
+    "main.2c6dc8a5.css.map": "/static/css/main.2c6dc8a5.css.map",
+    "main.b3b94c50.js.map": "/static/js/main.b3b94c50.js.map",
+    "787.ec610b0e.chunk.js.map": "/static/js/787.ec610b0e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c6dc8a5.css",
+    "static/js/main.b3b94c50.js"
+  ]
+}
