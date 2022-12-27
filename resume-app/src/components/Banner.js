@@ -4,6 +4,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import malaika from "../assets/img/malaika.svg"
 
 export const Banner = () => {
+
     const [loopNum, setLoopNum ] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = ["Woman in STEM", "Soon-To-Be Grad", "Student Leader"];
