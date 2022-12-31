@@ -13,7 +13,7 @@ export const Bottom = () => {
                             <img src={loogo}/>
                         </div>
                         <div className="email">
-                            <p>Website created by Malaika Sud, 2023</p>
+                            <p>Website by Malaika Sud, 2023. Created using React/React Bootstrap, HTML, CSS, and JavaScript.</p>
                         </div>
                     </Col>
 
