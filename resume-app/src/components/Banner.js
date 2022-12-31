@@ -49,7 +49,7 @@ export const Banner = () => {
                         <span className="tagline">about me</span>
                         <h1> My name is Malaika Sud. I am a... <br/> <span className="wrap">{text}</span></h1>
                         <p>I'm currently a senior at UC Santa Cruz studying Computer Science. I'll be graduating with a Bachelor's of Science in CS in June 2023 and I'm an aspiring software engineer! Thank you for visiting my resume website, feel free to peruse and take a look at my skills + experience! </p>
-                        <button onClick={() => console.log('connect')}>Contact me! <ArrowRightCircle size={25}/> </button>
+                        <button onClick={() => window.location.href = "mailto:malaika.sud@gmail.com"}>Contact me!<ArrowRightCircle size={25}/> </button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={malaika} alt="Header image"/>

@@ -556,11 +556,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   bottom: 0;
   width: 40%;
-  height: 80%;
-  margin-top: -600px;
+  height: 40%;
   right: 0;
   z-index: 1;
   opacity: 0.4;
+}
+
+.bottom {
+  margin-top: 100px;
+  padding: 0 0 10px 0;
+  background-image: url('./assets/img/bottoom.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.bottom p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 15px;
+}
+
+.bottom .social-icon {
+  padding-top: 50px;
+}
+
+.bottom .woopers {
+  margin-top: 32px;
+  width: 40%;
+}
+
+.bottom .email {
+  float: left;
 }
 
 .App {

@@ -47,7 +47,7 @@ export const NavBar = () => {
                             <a href="https://www.linkedin.com/in/malaika-sud/"><img src={linkedinIcon} alt=""/></a>
                             <a href="https://github.com/malaika-sud"><img src={githubIcon} alt=""/></a>
                         </div>
-                        <button className="vvd" onClick={() => console.log('connect')}><span>Contact Me!</span> </button>
+                        <button className="vvd" onClick={() => window.location.href = "mailto:malaika.sud@gmail.com"}><span>Contact Me!</span> </button>
                     </span>
                 </Navbar.Collapse>
             </Container>

@@ -29,7 +29,7 @@ export const Projects = () => {
                         <a href="https://people.ucsc.edu/~msud/" target="_blank"><img src={foodge} alt="" /></a>
                     
                             <div className="txt2">
-                                A recipe generator website inspired by my college cooking skills (or lack thereof). I began this project to find a solution to the fact that I "never had anything to eat". Created utilizing the MealDB API, HTML, CSS, and JS.  <br/>
+                                A recipe generator website inspired by my college cooking skills (or lack thereof). I began this project to find a solution to the fact that I "never had anything to eat". Created utilizing the MealDB API, HTML, CSS, and JS. (IN PROGRESS: will update with official website on completion!) <br/>
                             </div>
                 
                         </div>
