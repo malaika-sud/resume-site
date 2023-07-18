@@ -106,22 +106,22 @@ export const Experience = () => {
                                 </Tab.Pane>
 
                                 <Tab.Pane eventKey="fourth">
-                                  <h4>May 2022 - Present</h4> <br/>
-                                    <h5>As the Engineering VP I am responsible for organizing events and activities for our engineering majors. </h5> <br/>
+                                  <h4>May 2022 - June 2023</h4> <br/>
+                                    <h5>As the Engineering VP I was responsible for organizing events and activities for our engineering majors. </h5> <br/>
                                     <p>
-                                    - Assists CS major SASE members with resume advice, small group tutoring, etc. <br/>
-                                    - Coordinating SASE West Regional Conference 2022 and overseeing officer panels. <br/>
+                                    - Assisted CS major SASE members with resume advice, small group tutoring, etc. <br/>
+                                    - Coordinated SASE West Regional Conference 2022 and oversaw officer panels. <br/>
                                     </p>
 
                                 </Tab.Pane>
 
                                 <Tab.Pane eventKey="fifth">
-                                  <h4>Aug. 2022 - Present</h4> <br/>
-                                    <h5> As a UI Components Lead I am responsible for: </h5>
+                                  <h4>Aug. 2022 - June 2023</h4> <br/>
+                                    <h5> As a UI Components Lead I was responsible for: </h5>
                                     <p> - organizing and mentoring a UI Components team through each quarter <br/>
                                         - crafting component hierarchies <br/>
                                         - generating components for my teams to work on under supervision.</p> <br/>
-                                        <h5> Primarily works with HTML, CSS, JavaScript, and Angular to develop responsive components and dynamically updated pages for the Tech4Good web platform. </h5> <br/>
+                                        <h5> Primarily worked with HTML, CSS, JavaScript, and Angular to develop responsive components and dynamically updated pages for the Tech4Good web platform. </h5> <br/>
 
                                 </Tab.Pane>
 

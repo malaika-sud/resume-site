@@ -13,7 +13,7 @@ export const Projects = () => {
                     <Col>
                         <div className="projects-bx">
                         <h2> My Projects </h2>
-                        <p> <br/>A section to host some of my personal projects &amp; showcase my interests in coding! My skills, as listed above, put to use.</p>
+                        <p> <br/>A section to host some of my personal projects &amp; showcase my interests in coding! My skills, as listed above, put to use. Click on the images to explore.</p>
                         
                         <div className="proj1">
                         <a href="https://people.ucsc.edu/~msud/" target="_blank"><img src={world} alt="" /></a>
@@ -26,10 +26,10 @@ export const Projects = () => {
 
                         <div className="proj2">
                         {/* CHANGE THE LINK LATER WHEN HOSTED ON A PLATFORM */}
-                        <a href="https://people.ucsc.edu/~msud/" target="_blank"><img src={foodge} alt="" /></a>
+                        <a href="https://github.com/malaika-sud/foodge" target="_blank"><img src={foodge} alt="" /></a>
                     
                             <div className="txt2">
-                                A recipe generator website inspired by my college cooking skills (or lack thereof). I began this project to find a solution to the fact that I "never had anything to eat". Created utilizing the MealDB API, HTML, CSS, and JS. (IN PROGRESS: will update with official website on completion!) <br/>
+                                A recipe website inspired by my college cooking skills (or lack thereof). I began this project to find a solution to the fact that I "never had anything to eat". Created utilizing the MealDB API, CSS, and JS. (IN PROGRESS: will update with the officially hosted website on completion. For now, directs to the GitHub repository.) <br/>
                             </div>
                 
                         </div>
