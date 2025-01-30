@@ -7,7 +7,7 @@ export const Banner = () => {
 
     const [loopNum, setLoopNum ] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["A New Grad", "Seeking Employment"];
+    const toRotate = ["A Georgia Tech CS Graduate Student", "Seeking Early Career Roles"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 1900;
@@ -48,7 +48,9 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">about me</span>
                         <h1> My name is Malaika Sud. I am... <br/> <span className="wrap">{text}</span></h1>
-                        <p>I'm a fresh grad from UC Santa Cruz as of June 2023. I graduated with my B.S. in Computer Science with Honors, and I'm currently seeking software engineering roles. Thank you for visiting my resume website, feel free to peruse and take a look at my skills + experience! </p>
+                        <p>I earned my B.S. in Computer Science with Honors from UC Santa Cruz in June 2023 and am currently pursuing my M.S. in Computer Science at Georgia Tech. I am actively seeking early-career software engineering roles.</p>
+                        <p>Feel free to explore my skills and experience, and click the Resume button in the navigation bar to view my most up-to-date resume. Please note that the site may not always reflect the latest updates.</p>
+                        <p>Thank you for visiting!</p>
                         <button onClick={() => window.location.href = "mailto:malaika.sud@gmail.com"}>Contact me!<ArrowRightCircle size={25}/> </button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
