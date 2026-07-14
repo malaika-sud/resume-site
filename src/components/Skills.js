@@ -26,6 +26,49 @@ export const Skills = () => {
         }
       };
 
+      const skills = [
+        { label: "Python", img: lang },
+        { label: "TypeScript", img: lang },
+        { label: "JavaScript", img: lang },
+        { label: "Rust", img: lang },
+        { label: "SQL", img: lang },
+        { label: "Java", img: lang },
+        { label: "HTML & CSS", img: lang },
+        { label: "React", img: tooly },
+        { label: "Next.js", img: tooly },
+        { label: "Angular", img: tooly },
+        { label: "Tailwind CSS", img: tooly },
+        { label: "Radix UI", img: tooly },
+        { label: "Node.js", img: tooly },
+        { label: "NestJS", img: tooly },
+        { label: "Django", img: tooly },
+        { label: "Spring Boot", img: tooly },
+        { label: "Actix Web", img: tooly },
+        { label: "Tokio", img: tooly },
+        { label: "SQLx", img: tooly },
+        { label: "PostgreSQL", img: tooly },
+        { label: "PostGIS", img: tooly },
+        { label: "pgvector", img: tooly },
+        { label: "Docker", img: tooly },
+        { label: "WebSockets", img: tooly },
+        { label: "Auth0", img: tooly },
+        { label: "Git & GitHub", img: tooly },
+        { label: "Figma", img: tooly },
+        { label: "OpenAI API", img: tooly },
+        { label: "DSPy", img: tooly },
+        { label: "RAG", img: tooly },
+        { label: "Embeddings", img: tooly },
+        { label: "Hybrid Search", img: tooly },
+        { label: "Prompt Engineering", img: tooly },
+        { label: "Artificial Intelligence", img: course },
+        { label: "ML for Trading", img: course },
+        { label: "Database Systems", img: course },
+        { label: "Software Arch. & Design", img: course },
+        { label: "Computational Models", img: course },
+        { label: "Comp. Systems Design", img: course },
+        { label: "Web Applications", img: course },
+      ];
+
       return (
           <section className="skill" id="skills">
               <Container>
@@ -35,87 +78,19 @@ export const Skills = () => {
                             <h2> My Skill Set </h2>
                             <p> <br/> A comprehensive list of the main programming languages, tools, and relevant coursework that I have experience with!</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
-                                <div className="item">
-                                    <h5>JavaScript</h5>
-                                    <img src={lang} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>C++</h5>
-                                    <img src={lang} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Python</h5>
-                                    <img src={lang} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>HTML &amp; CSS</h5>
-                                    <img src={lang} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Haskell</h5>
-                                    <img src={lang} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Git</h5>
-                                    <img src={tooly} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Angular</h5>
-                                    <img src={tooly} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>React</h5>
-                                    <img src={tooly} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Figma</h5>
-                                    <img src={tooly} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Jupyter Notebook</h5>
-                                    <img src={tooly} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Data Struct. &amp; Alg.</h5>
-                                    <img src={course} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Analysis of Algorithms</h5>
-                                    <img src={course} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Computational Models</h5>
-                                    <img src={course} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Comp. Systems Design</h5>
-                                    <img src={course} alt=""/>
-                                </div>
-
-                                <div className="item">
-                                    <h5>Computer Graphics</h5>
-                                    <img src={course} alt=""/>
-                                </div>
+                                {skills.map((skill, index) => (
+                                    <div className="item" key={index}>
+                                        <h5>{skill.label}</h5>
+                                        <img src={skill.img} alt=""/>
+                                    </div>
+                                ))}
 
                             </Carousel>
                         </div>
                       </Col>
                   </Row>
               </Container>
-              <img className="background-image-left" src={bg} />
+              <img className="background-image-left" src={bg} alt="" aria-hidden="true" />
           </section>
       )
 }
