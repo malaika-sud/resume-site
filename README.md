@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Site: [malaika-sud.com](http://www.malaika-sud.com/)
+
+A responsive personal portfolio built to present my software engineering experience, education, technical skills, and projects in a clean recruiter-facing format.
+
+This site is meant to be more than a static resume page. It gives visitors a quick, interactive way to understand what I am working on now, what technologies I use, and how my experience connects across frontend, backend, AI, and systems-focused work.
+
+## What It Does
+
+The portfolio highlights:
+
+- current software engineering work at Sailing Stone AI
+- graduate study in Computer Science at Georgia Tech
+- technical skills across frontend, backend, databases, AI tooling, and infrastructure
+- selected technical projects, including HourBank and this portfolio site
+- resume, GitHub, LinkedIn, and email contact paths
+
+The site is designed for fast scanning. Recruiters can land on the page, understand my background within a few seconds, and then dig into experience tabs, project details, or my resume.
+
+## Key Features
+
+- Dynamic section with rotating typewriter text
+- Responsive graduation photo and short career summary
+- Education section for Georgia Tech and UC Santa Cruz
+- Skills carousel grouped around languages, tools, frameworks, AI/ML, and coursework
+- Interactive experience section with clickable cards and tabbed role details
+- Project section with a clear GitHub call-to-action for HourBank
+- Responsive navigation and contact actions
+- Production build served through a small Express server
+
+## Why This Project Matters
+
+This project focuses on the frontend and product-presentation side of my portfolio.
+
+The engineering goal was to keep the site simple but intentional: reusable React components, clear section ownership, responsive layout behavior, and enough interactivity to feel custom without becoming overcomplicated.
+
+## Tech Stack
+
+| Area          | Tools                                                        |
+| ------------- | ------------------------------------------------------------ |
+| Frontend      | React, JavaScript, React Bootstrap                           |
+| Styling       | CSS, Bootstrap grid, custom responsive layout                |
+| UI behavior   | React state, controlled tabs, carousel, typewriter animation |
+| Icons         | React Bootstrap Icons                                        |
+| Serving       | Node.js, Express                                             |
+| Build tooling | Create React App, react-scripts                              |
+
+## Project Structure
+
+```text
+src/
+  components/
+    Banner.js          # Hero section, typewriter text, intro copy
+    Education.js       # Academic background
+    Skills.js          # Technical skills carousel
+    Experience.js      # Tabbed experience section
+    ExperienceTab.js   # Clickable experience overview cards
+    Projects.js        # Featured project descriptions and links
+    NavBar.js          # Navigation, resume, social links
+    Bottom.js          # Footer
+  assets/
+    img/               # Logos, profile photo, section artwork
+    font/              # Custom Centra font files
+```
+
+## Running Locally
+
+Prerequisites:
+
+- Node.js
+- npm
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Serve the production build:
+
+```bash
+npm start
+```
+
+The Express server runs on `http://localhost:3000` by default.
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Command         | Description                                       |
+| --------------- | ------------------------------------------------- |
+| `npm run build` | Creates an optimized production build in `build/` |
+| `npm start`     | Serves the production build with Express          |
+| `npm test`      | Runs the React test runner                        |
 
-### `npm start`
+## Status
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is an active portfolio project. I update it as my resume, projects, and technical focus evolve.

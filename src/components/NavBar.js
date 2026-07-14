@@ -7,6 +7,7 @@ import githubIcon from '../assets/img/icon2.svg';
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const [expanded, setExpanded] = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
@@ -27,7 +28,7 @@ export const NavBar = () => {
     }
 
     return (
-        <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
+        <Navbar expand="lg" expanded={expanded} onToggle={setExpanded} className={scrolled || expanded ? "scrolled": ""}>
             <Container>
                 <Navbar.Brand href="#home">
                     <img src={loogo} alt="Logo" />
