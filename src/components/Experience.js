@@ -125,21 +125,28 @@ export const Experience = () => {
                   <br />
                   <p>
                     - Built a full-stack retrieval-augmented AI assistant with
-                    Rust, Next.js, React, TypeScript, PostgreSQL, pgvector, and
-                    the OpenAI API. <br />
-                    - Engineered a hybrid retrieval pipeline combining pgvector
-                    semantic search with PostgreSQL full-text search, relevance
-                    weighting, and chunk deduplication. <br />
+                    Rust, Next.js, React, and TypeScript that answers user
+                    questions grounded in 12 retrieved context items from
+                    product and customer documentation plus the last 6
+                    conversation turns. <br />
+                    - Engineered a hybrid retrieval pipeline pairing OpenAI
+                    embeddings and pgvector semantic search with PostgreSQL
+                    full-text search, weighting semantic and keyword relevance
+                    70/30 and deduplicating document chunks into
+                    relevance-ranked prompts. <br />
                     - Designed an async Rust backend that persists durable
                     conversation state in PostgreSQL and streams model responses
-                    over WebSockets. <br />
+                    over WebSockets, scoped per tenant and account. <br />
                     - Developed a reusable TypeScript/React chat workspace with
                     optimistic updates, streaming message merging, retry and
-                    timeout recovery, and sanitized Markdown rendering. <br />
+                    timeout recovery, and sanitized Markdown rendering for both
+                    a full chat page and an embedded in-app panel. <br />
                     - Built an LLM agent system with DSPy, OpenAI API, and
-                    pgvector, and shipped a task-management platform with
-                    real-time updates, predictive velocity modeling, and a
-                    FaunaDB-to-PostgreSQL migration. <br />
+                    pgvector for internal task automation and semantic search,
+                    and shipped a task-management platform with real-time
+                    updates, predictive velocity modeling, a
+                    FaunaDB-to-PostgreSQL migration, and an automated Google
+                    Sheets-to-database pipeline. <br />
                   </p>
                 </Tab.Pane>
 
