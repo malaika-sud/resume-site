@@ -1,5 +1,7 @@
 # Portfolio Website
 
+[![Quality Checks](https://github.com/malaika-sud/resume-site/actions/workflows/quality.yml/badge.svg)](https://github.com/malaika-sud/resume-site/actions/workflows/quality.yml)
+
 Live Site: [malaika-sud.com](http://www.malaika-sud.com/)
 
 A responsive personal portfolio built to present my software engineering experience, education, technical skills, and projects in a clean recruiter-facing format.
