@@ -14,6 +14,24 @@ jest.mock('react-multi-carousel', () => function MockCarousel({ children }) {
 });
 
 const firstTypewriterTitle = 'A Software Engineer at Sailing Stone AI';
+const originalMatchMedia = window.matchMedia;
+
+const setReducedMotionPreference = (matches) => {
+  Object.defineProperty(window, 'matchMedia', {
+    configurable: true,
+    writable: true,
+    value: jest.fn().mockImplementation((query) => ({
+      matches,
+      media: query,
+      onchange: null,
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
+};
 
 const advanceTimers = (steps, getTimer) => {
   for (let step = 0; step < steps; step += 1) {
@@ -24,6 +42,11 @@ const advanceTimers = (steps, getTimer) => {
 };
 
 afterEach(() => {
+  Object.defineProperty(window, 'matchMedia', {
+    configurable: true,
+    writable: true,
+    value: originalMatchMedia,
+  });
   jest.restoreAllMocks();
 });
 
@@ -41,7 +64,7 @@ test('renders the navigation component', () => {
   render(<NavBar />);
 
   expect(screen.getByRole('navigation')).toBeInTheDocument();
-  expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /^home$/i })).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /projects/i })).toBeInTheDocument();
   expect(screen.getByRole('button', { name: /contact me/i })).toBeInTheDocument();
 });
@@ -138,6 +161,18 @@ test('cycles the banner typewriter copy', () => {
 
   advanceTimers(firstTypewriterTitle.length + 10, () => runTypewriterTick);
   expect(heading).toHaveTextContent(/a georgia/i);
+});
+
+test('shows static banner copy when reduced motion is preferred', () => {
+  setReducedMotionPreference(true);
+  const intervalSpy = jest.spyOn(global, 'setInterval');
+
+  render(<Banner />);
+
+  expect(
+    screen.getByRole('heading', { name: /my name is malaika sud/i })
+  ).toHaveTextContent(firstTypewriterTitle);
+  expect(intervalSpy).not.toHaveBeenCalled();
 });
 
 test('updates the navbar state after scrolling', () => {

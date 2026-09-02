@@ -30,8 +30,8 @@ export const NavBar = () => {
     return (
         <Navbar expand="lg" expanded={expanded} onToggle={setExpanded} className={scrolled || expanded ? "scrolled": ""}>
             <Container>
-                <Navbar.Brand href="#home">
-                    <img src={loogo} alt="Logo" />
+                <Navbar.Brand href="#home" aria-label="Malaika Sud home">
+                    <img src={loogo} alt="" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"> 
                   <span className="navbar-toggler-icon"></span>
@@ -47,8 +47,18 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/malaika-sud/"><img src={linkedinIcon} alt=""/></a>
-                            <a href="https://github.com/malaika-sud"><img src={githubIcon} alt=""/></a>
+                            <a
+                                href="https://www.linkedin.com/in/malaika-sud/"
+                                aria-label="Malaika Sud LinkedIn profile"
+                            >
+                                <img src={linkedinIcon} alt=""/>
+                            </a>
+                            <a
+                                href="https://github.com/malaika-sud"
+                                aria-label="Malaika Sud GitHub profile"
+                            >
+                                <img src={githubIcon} alt=""/>
+                            </a>
                         </div>
                         <button className="vvd" onClick={() => window.location.href = "mailto:malaika.sud@gmail.com"}><span>Contact Me!</span> </button>
                     </span>
