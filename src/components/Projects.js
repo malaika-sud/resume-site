@@ -33,7 +33,7 @@ export const Projects = () => {
                 {projects.map((project, index) => (
                   <div className="project-row" key={index}>
                     <div className="project-copy">
-                      <h4>{project.title}</h4>
+                      <h3>{project.title}</h3>
                       <span>{project.stack}</span>
                       <p>{project.text}</p>
                       {project.href && (

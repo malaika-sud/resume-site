@@ -22,10 +22,16 @@ export const Bottom = () => {
 
           <Col sm={6} className="text-sm-end">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/malaika-sud/">
+              <a
+                href="https://www.linkedin.com/in/malaika-sud/"
+                aria-label="Malaika Sud LinkedIn profile"
+              >
                 <img src={linkedinIcon} alt="" />
               </a>
-              <a href="https://github.com/malaika-sud">
+              <a
+                href="https://github.com/malaika-sud"
+                aria-label="Malaika Sud GitHub profile"
+              >
                 <img src={githubIcon} alt="" />
               </a>
             </div>

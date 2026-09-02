@@ -80,7 +80,7 @@ export const Skills = () => {
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 {skills.map((skill, index) => (
                                     <div className="item" key={index}>
-                                        <h5>{skill.label}</h5>
+                                        <span className="skill-label">{skill.label}</span>
                                         <img src={skill.img} alt=""/>
                                     </div>
                                 ))}

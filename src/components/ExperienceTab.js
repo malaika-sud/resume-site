@@ -8,8 +8,8 @@ export const ExperienceTab = ({ job, role, imgU, className = "", onSelect }) => 
                 <img src={imgU} alt={`${job} experience`} />
 
                 <div className="exp-txtx">
-                    <h4>{job}</h4>
-                    <span>{role}</span>
+                    <span className="experience-card-title">{job}</span>
+                    <span className="experience-card-role">{role}</span>
                 </div>
             </div>
             </button>

@@ -61,8 +61,14 @@ button {
   background-color: transparent;
 }
 
-input:focus, textarea:focus, select:focus {
-  outline: none;
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #C9B6FF;
+  outline-offset: 4px;
 }
 
 @media (min-width:1700px) {
@@ -183,9 +189,10 @@ span.navbar-text {
 	height: 100%;
 	position: absolute;
 }
-nav.navbar .navbar-toggler:active,
-nav.navbar .navbar-toggler:focus {
-	outline: none;
+nav.navbar .navbar-toggler:active {
+  box-shadow: none;
+}
+nav.navbar .navbar-toggler:focus-visible {
   box-shadow: none;
 }
 nav.navbar .navbar-toggler-icon {
@@ -394,11 +401,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 50%;
   margin: 0 auto 15px auto;
 }
-.skill-slider .item h5 {
+.skill-slider .item .skill-label {
   min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
   padding: 0 8px;
 }
 .background-image-left {
@@ -582,20 +593,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   top: 50%;
   opacity: 1;
 }
-.exp-txtx h4 {
+.exp-txtx .experience-card-title {
+  display: block;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
 }
-.exp-txtx span {
+.exp-txtx .experience-card-role {
+  display: block;
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
 }
-.experience .tab-pane h4,
-.experience .tab-pane h5,
+.experience .tab-pane .experience-date,
+.experience .tab-pane .experience-summary,
 .experience .tab-pane p {
   max-width: 900px;
   margin-left: auto;
@@ -605,7 +618,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: min(900px, 94%);
   text-align: left;
 }
-.experience .tab-pane h5 {
+.experience .tab-pane .experience-date,
+.experience .tab-pane .experience-summary {
+  width: min(900px, 94%);
+  text-align: center;
+}
+.experience .tab-pane .experience-summary {
   color: #fff;
   line-height: 1.45em;
 }
@@ -700,7 +718,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 70%;
 }
 
-.project-copy h4 {
+.project-copy h3 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 6px;
@@ -844,6 +862,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

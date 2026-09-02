@@ -69,6 +69,7 @@ export const Experience = () => {
               id="experience-tabs"
               activeKey={activeTab}
               onSelect={(key) => key && setActiveTab(key)}
+              transition={false}
             >
               <Nav
                 variant="pills"
@@ -116,12 +117,12 @@ export const Experience = () => {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="second">
-                  <h4>Dec. 2024 - Present</h4> <br />
-                  <h5>
+                  <p className="experience-date">Dec. 2024 - Present</p> <br />
+                  <p className="experience-summary">
                     As a Software Engineer at Sailing Stone AI, I build
                     full-stack AI systems for database, schema, migration, and
                     task workflows.
-                  </h5>{" "}
+                  </p>{" "}
                   <br />
                   <p>
                     - Built a full-stack retrieval-augmented AI assistant with
@@ -151,12 +152,12 @@ export const Experience = () => {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="third">
-                  <h4>Nov. 2019 - May 2021 </h4> <br />
-                  <h5>
+                  <p className="experience-date">Nov. 2019 - May 2021 </p> <br />
+                  <p className="experience-summary">
                     As Chapter Founder &amp; President of Girls Who Code, I
                     advocated for the involvement of women in STEM at Ohlone
                     College.{" "}
-                  </h5>{" "}
+                  </p>{" "}
                   <br />
                   <p>
                     - Served as a proxy between Girls Who Code Headquarters and
@@ -167,21 +168,21 @@ export const Experience = () => {
                     advertising, outreach, and recruitment. <br />
                   </p>
                   <br />
-                  <h5>
+                  <p className="experience-summary">
                     {" "}
                     Hosted club workshops on GitHub, HTML/CSS (Web Dev Series),
                     Flutter/Android Studio (App Dev Series). <br />
                     Planned and presented an OhloneHacks Figma workshop for
                     Spring 2021.{" "}
-                  </h5>
+                  </p>
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="fourth">
-                  <h4>June 2021 - July 2021 </h4> <br />
-                  <h5>
+                  <p className="experience-date">June 2021 - July 2021 </p> <br />
+                  <p className="experience-summary">
                     As a Section Leader, I led groups of students through the
                     Stanford Summer Python curriculum.
-                  </h5>{" "}
+                  </p>{" "}
                   <br />
                   <p>
                     - Met daily with my group for in-depth reviews of
@@ -197,11 +198,11 @@ export const Experience = () => {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="fifth">
-                  <h4>May 2022 - June 2023</h4> <br />
-                  <h5>
+                  <p className="experience-date">May 2022 - June 2023</p> <br />
+                  <p className="experience-summary">
                     As the Engineering VP I was responsible for organizing
                     events and activities for our engineering majors.{" "}
-                  </h5>{" "}
+                  </p>{" "}
                   <br />
                   <p>
                     - Assisted CS major SASE members with resume advice, small
@@ -216,8 +217,11 @@ export const Experience = () => {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="sixth">
-                  <h4>Aug. 2022 - June 2023</h4> <br />
-                  <h5> As a UI Components Lead I was responsible for: </h5>
+                  <p className="experience-date">Aug. 2022 - June 2023</p> <br />
+                  <p className="experience-summary">
+                    {" "}
+                    As a UI Components Lead I was responsible for:{" "}
+                  </p>
                   <p>
                     {" "}
                     - Organizing and mentoring a UI Components team through each
@@ -231,12 +235,12 @@ export const Experience = () => {
                     that improved productivity and collaboration.
                   </p>{" "}
                   <br />
-                  <h5>
+                  <p className="experience-summary">
                     {" "}
                     Primarily worked with HTML, CSS, JavaScript, and Angular to
                     develop responsive components and dynamically updated pages
                     for the Tech4Good web platform.{" "}
-                  </h5>{" "}
+                  </p>{" "}
                   <br />
                 </Tab.Pane>
               </Tab.Content>
