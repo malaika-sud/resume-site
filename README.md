@@ -47,6 +47,7 @@ The engineering goal was to keep the site simple but intentional: reusable React
 | Icons         | React Bootstrap Icons                                        |
 | Serving       | Node.js, Express                                             |
 | Build tooling | Create React App, react-scripts                              |
+| Container     | Docker, Node.js slim runtime                                 |
 
 ## Project Structure
 
@@ -93,11 +94,29 @@ npm start
 
 The Express server runs on `http://localhost:3000` by default.
 
+## Running with Docker
+
+Build the production image:
+
+```bash
+docker build -t resume-site .
+```
+
+Run the container:
+
+```bash
+docker run --rm -p 8088:8088 resume-site
+```
+
+The image builds the React app in a separate stage, then serves the optimized
+build with the existing Express server on port `8088`.
+
 ## Available Scripts
 
 | Command         | Description                                       |
 | --------------- | ------------------------------------------------- |
 | `npm run build` | Creates an optimized production build in `build/` |
+| `npm run lint`  | Runs ESLint with warnings treated as failures     |
 | `npm start`     | Serves the production build with Express          |
 | `npm test`      | Runs the React test runner                        |
 
