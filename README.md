@@ -111,6 +111,23 @@ docker run --rm -p 8088:8088 resume-site
 The image builds the React app in a separate stage, then serves the optimized
 build with the existing Express server on port `8088`.
 
+## Lighthouse Baseline
+
+Measured on September 4, 2026 with Lighthouse 12.8.2 against a local production
+build served by Express at `http://127.0.0.1:8090`.
+
+| Performance | Accessibility | Best Practices | SEO |
+| ----------- | ------------- | -------------- | --- |
+| 77          | 100           | 96             | 100 |
+
+Lighthouse reported a 2.0s First Contentful Paint and 5.9s Largest Contentful
+Paint. The lowest category was Performance, with the largest follow-up
+opportunities in text compression, image format and sizing, font loading,
+render-blocking CSS, and unused CSS.
+
+The Accessibility score reflects Lighthouse's automated audit; the test suite
+also runs automated axe checks in CI.
+
 ## Available Scripts
 
 | Command         | Description                                       |
