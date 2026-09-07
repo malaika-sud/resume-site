@@ -15,7 +15,7 @@ export const Bottom = () => {
             <div className="email">
               <p>
                 Website by Malaika Sud, 2026. Created using React/React
-                Bootstrap, HTML, CSS, and JavaScript.
+                Bootstrap, HTML, CSS, TypeScript, and JavaScript.
               </p>
             </div>
           </Col>

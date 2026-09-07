@@ -41,7 +41,7 @@ The engineering goal was to keep the site simple but intentional: reusable React
 
 | Area          | Tools                                                        |
 | ------------- | ------------------------------------------------------------ |
-| Frontend      | React, JavaScript, React Bootstrap                           |
+| Frontend      | React, TypeScript, JavaScript, React Bootstrap               |
 | Styling       | CSS, Bootstrap grid, custom responsive layout                |
 | UI behavior   | React state, controlled tabs, carousel, typewriter animation |
 | Icons         | React Bootstrap Icons                                        |
@@ -54,14 +54,14 @@ The engineering goal was to keep the site simple but intentional: reusable React
 ```text
 src/
   components/
-    Banner.js          # Hero section, typewriter text, intro copy
-    Education.js       # Academic background
-    Skills.js          # Technical skills carousel
-    Experience.js      # Tabbed experience section
-    ExperienceTab.js   # Clickable experience overview cards
-    Projects.js        # Featured project descriptions and links
-    NavBar.js          # Navigation, resume, social links
-    Bottom.js          # Footer
+    Banner.tsx          # Hero section, typewriter text, intro copy
+    Education.tsx       # Academic background
+    Skills.tsx          # Technical skills carousel
+    Experience.tsx      # Tabbed experience section
+    ExperienceTab.tsx   # Clickable experience overview cards
+    Projects.tsx        # Featured project descriptions and links
+    NavBar.tsx          # Navigation, resume, social links
+    Bottom.tsx          # Footer
   assets/
     img/               # Logos, profile photo, section artwork
     font/              # Custom Centra font files
@@ -130,12 +130,13 @@ also runs automated axe checks in CI.
 
 ## Available Scripts
 
-| Command         | Description                                       |
-| --------------- | ------------------------------------------------- |
-| `npm run build` | Creates an optimized production build in `build/` |
-| `npm run lint`  | Runs ESLint with warnings treated as failures     |
-| `npm start`     | Serves the production build with Express          |
-| `npm test`      | Runs the React test runner                        |
+| Command             | Description                                         |
+| ------------------- | --------------------------------------------------- |
+| `npm run build`     | Creates an optimized production build in `build/`   |
+| `npm run lint`      | Runs ESLint with warnings treated as failures       |
+| `npm run typecheck` | Runs the TypeScript compiler without emitting files |
+| `npm start`         | Serves the production build with Express            |
+| `npm test`          | Runs the React test runner                          |
 
 ## Status
 

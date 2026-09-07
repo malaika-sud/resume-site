@@ -1,8 +1,15 @@
 import { Container, Row, Col } from "react-bootstrap";
 import boops from "../assets/img/bg.png";
 
+type Project = {
+  title: string;
+  stack: string;
+  text: string;
+  href?: string;
+};
+
 export const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "HourBank",
       stack: "TypeScript, NestJS, PostgreSQL, PostGIS, Docker",
@@ -11,7 +18,7 @@ export const Projects = () => {
     },
     {
       title: "Portfolio Website (this site!)",
-      stack: "React, JavaScript, React Bootstrap, CSS",
+      stack: "React, TypeScript, JavaScript, React Bootstrap, CSS",
       text: "Built and deployed a responsive React portfolio website showcasing my projects and technical experience across desktop and mobile.",
     },
   ];

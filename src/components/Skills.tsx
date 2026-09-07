@@ -5,9 +5,15 @@ import tooly from "../assets/img/tools.svg";
 import course from "../assets/img/course.svg";
 import lang from "../assets/img/lang.svg";
 import bg from "../assets/img/bg.png";
+import type { ResponsiveType } from 'react-multi-carousel';
+
+type Skill = {
+    label: string;
+    img: string;
+};
 
 export const Skills = () => {
-    const responsive = {
+    const responsive: ResponsiveType = {
         superLargeDesktop: {
           breakpoint: { max: 4000, min: 3000 },
           items: 5
@@ -26,7 +32,7 @@ export const Skills = () => {
         }
       };
 
-      const skills = [
+      const skills: Skill[] = [
         { label: "Python", img: lang },
         { label: "TypeScript", img: lang },
         { label: "JavaScript", img: lang },

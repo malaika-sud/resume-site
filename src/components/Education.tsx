@@ -1,7 +1,15 @@
 import { Container, Row, Col } from "react-bootstrap";
 
+type School = {
+    school: string;
+    degree: string;
+    timeline: string;
+    detail: string;
+    coursework: string;
+};
+
 export const Education = () => {
-    const schools = [
+    const schools: School[] = [
         {
             school: "Georgia Institute of Technology",
             degree: "M.S. in Computer Science",

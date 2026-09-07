@@ -1,6 +1,14 @@
 import { Col } from "react-bootstrap";
 
-export const ExperienceTab = ({ job, role, imgU, className = "", onSelect }) => {
+export type ExperienceTabProps = {
+    job: string;
+    role: string;
+    imgU: string;
+    className?: string;
+    onSelect: () => void;
+};
+
+export const ExperienceTab = ({ job, role, imgU, className = "", onSelect }: ExperienceTabProps) => {
     return (
         <Col sm={7} md={6}> 
             <button className="experience-card-link" onClick={onSelect} type="button">

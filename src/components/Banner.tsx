@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import malaikaPhoto from "../assets/img/malaika-photo.png"
+import malaikaPhoto from "../assets/img/malaika-photo.png";
 
 const rotatingTitles = [
     "A Software Engineer at Sailing Stone AI",
@@ -35,7 +35,7 @@ export const Banner = () => {
             return undefined;
         }
 
-        const onPreferenceChange = (event) => {
+        const onPreferenceChange = (event: MediaQueryListEvent) => {
             setPrefersReducedMotion(event.matches);
         };
 
@@ -62,9 +62,9 @@ export const Banner = () => {
         }
 
         const tick = () => {
-            let i = loopNum % rotatingTitles.length;
-            let fullText = rotatingTitles[i];
-            let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+            const i = loopNum % rotatingTitles.length;
+            const fullText = rotatingTitles[i];
+            const updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
             setText(updatedText);
 
             if (isDeleting) {
@@ -82,11 +82,11 @@ export const Banner = () => {
 
         }
 
-        let ticker = setInterval(() => {
+        const ticker = window.setInterval(() => {
             tick();
         }, delta)
 
-        return () => { clearInterval(ticker)};
+        return () => { window.clearInterval(ticker)};
     }, [delta, isDeleting, loopNum, prefersReducedMotion, text])
 
     const typewriterText = prefersReducedMotion ? rotatingTitles[0] : text;

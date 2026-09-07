@@ -9,10 +9,26 @@ import sailingStoneLogo from "../assets/img/sailing-stone-ai-logo.jpg";
 
 import { ExperienceTab } from "./ExperienceTab";
 
-export const Experience = () => {
-  const [activeTab, setActiveTab] = useState("first");
+const experienceTabKeys = ["first", "second", "third", "fourth", "fifth", "sixth"] as const;
 
-  const experience = [
+type ExperienceTabKey = typeof experienceTabKeys[number];
+
+type ExperienceItem = {
+  job: string;
+  role: string;
+  imgU: string;
+  eventKey: Exclude<ExperienceTabKey, "first">;
+  className?: string;
+};
+
+const isExperienceTabKey = (key: string | null): key is ExperienceTabKey => (
+  key !== null && experienceTabKeys.includes(key as ExperienceTabKey)
+);
+
+export const Experience = () => {
+  const [activeTab, setActiveTab] = useState<ExperienceTabKey>("first");
+
+  const experience: ExperienceItem[] = [
     {
       job: "Sailing Stone AI",
       role: "Software Engineer",
@@ -68,7 +84,11 @@ export const Experience = () => {
             <Tab.Container
               id="experience-tabs"
               activeKey={activeTab}
-              onSelect={(key) => key && setActiveTab(key)}
+              onSelect={(key) => {
+                if (isExperienceTabKey(key)) {
+                  setActiveTab(key);
+                }
+              }}
               transition={false}
             >
               <Nav
@@ -104,12 +124,12 @@ export const Experience = () => {
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <Row>
-                    {experience.map((experience, index) => {
+                    {experience.map((item) => {
                       return (
                         <ExperienceTab
-                          key={index}
-                          {...experience}
-                          onSelect={() => setActiveTab(experience.eventKey)}
+                          key={item.eventKey}
+                          {...item}
+                          onSelect={() => setActiveTab(item.eventKey)}
                         />
                       );
                     })}

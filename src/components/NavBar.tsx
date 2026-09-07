@@ -4,8 +4,10 @@ import loogo from '../assets/img/loogo.svg';
 import linkedinIcon from '../assets/img/icon1.svg';
 import githubIcon from '../assets/img/icon2.svg';
 
+type ActiveLink = 'home' | 'education' | 'skills' | 'experience' | 'projects' | 'resume';
+
 export const NavBar = () => {
-    const [activeLink, setActiveLink] = useState('home');
+    const [activeLink, setActiveLink] = useState<ActiveLink>('home');
     const [scrolled, setScrolled] = useState(false);
     const [expanded, setExpanded] = useState(false);
 
@@ -23,7 +25,7 @@ export const NavBar = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
 
-    const onUpdateActiveLink = (value) => {
+    const onUpdateActiveLink = (value: ActiveLink) => {
         setActiveLink(value);
     }
 

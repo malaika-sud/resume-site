@@ -11,13 +11,13 @@ import { Bottom } from "./components/Bottom";
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <Banner/>
-      <Education/>
-      <Skills/>
-      <Experience/>
-      <Projects/>
-      <Bottom/>
+      <NavBar />
+      <Banner />
+      <Education />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Bottom />
     </div>
   );
 }
